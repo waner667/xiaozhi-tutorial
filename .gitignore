@@ -1,0 +1,13 @@
+# 本地构建产物
+_build/
+
+# 系统
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+
+# 编辑器
+.idea/
+.vscode/
+*.tmp
