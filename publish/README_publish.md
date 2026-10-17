@@ -6,10 +6,10 @@
 |---|---|
 | 空间 | [小智 DIY 教程 · ESP32-C6](https://docs.qq.com/space/DZXBtZVh1eGxJWWRJ) |
 | space_id | `epmeXuxlIYdI` |
-| 总览节点 | `epoqdcmXYuQN`（小智 DIY 教程站 · 总览） |
-| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `exhqHWzojEjS` |
-| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `egUYQYcrwYsc` |
-| 03 · 排查手册 | 文件夹 `ebobnNgGThws` / 文档 `eZGdcYNrrIAJ` |
+| 总览节点 | `exOOamjfJasG`（小智 DIY 教程站 · 总览） |
+| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `ebKkLCCBlgkR` |
+| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `eJMWmtdHMiqa` |
+| 03 · 排查手册 | 文件夹 `ebobnNgGThws` / 文档 `ewNFROVNTbPC` |
 
 四篇都是 `doc_type: word`（docx 导入），**可以在腾讯文档里直接编辑**。
 
@@ -85,7 +85,65 @@ python E:/QRS/Project/xiaozhi/xiaozhi_xiage/_check2.py
 
 ---
 
-## 本轮（2026-10-17）改了什么
+---
+
+## 外部图片来源：Flash 下载工具界面图
+
+教程一 4.6 / 4.9 节用了 5 张乐鑫 Flash 下载工具的界面截图，
+取自小智官方文档站（docusaurus 静态资源，可直接下载，不需要鉴权）：
+
+```
+https://xiaozhi.me/xz-docs/assets/images/flash-download-0N-<hash>.png
+```
+
+**为什么可以借**：这些图展示的是**第三方工具的界面**，与具体板型无关，
+任何用 Flash 下载工具的人看到的都是这个界面。
+
+**为什么接线图不能借**：虾哥那篇的接线图是 **ESP32-S3 面包板**的，
+引脚和本文的 C6 完全不同（S3: OLED SDA=41/SCL=42、功放 BCLK=15/LRC=16；
+C6: OLED SDA=11/SCL=10、BCLK/LRC 与麦克风共用 4/5）。照着接会接错线。
+
+已存的文件（`assets/`）：
+
+| 文件 | 内容 |
+|---|---|
+| `flash-tool-03-chiptype.png` | 芯片型号 / 工作模式 / 加载模式设置窗|
+| `flash-tool-main.png` | SPIDownload 主界面（勾选框 + bin + 0x0 + START + COM） |
+| `flash-tool-finish.png` | 烧录完成 FINISH |
+| `flash-tool-devmgr.png` | 工具里选 COM 端口那块的截图 |
+| `flash-tool-ch343.png` | 设备管理器里认出 CH343 那一项 |
+
+README 的「许可与免责」里已标注来源、版权归原作者、**截图里是 S3 而本文用 C6**。
+
+---
+
+## 本轮（2026-10-17 晚）改了什么
+
+**烧录章增加「图形工具直烧 bin」路线。**
+
+先核实了一件事：**官方 Release 里没有 C6 面包板的预编译包**。
+v2.5.2 有 190 个固件包，但上游 `main/boards` 51 个板型目录里
+只有 S3 版 `bread-compact-wifi`，C6 版 `bread-compact-c6` 是本地自建的。
+
+所以不能写「下载现成 bin 直烧」——那条路对 C6 不通。
+实际可用的写法是**两条路并列**：
+
+- 路线 A：`idf.py flash`，一条命令，最省心
+- 路线 B：`python scripts/release.py` 打包出 `build/merged-binary.bin`，
+  之后用乐鑫 Flash 下载工具 GUI 烧，**不用记偏移地址**
+
+路线 B 对教程二尤其重要（要反复改固件反复烧）。
+
+**同时把教程一整体降难度**（★★★☆☆ → ★★☆☆☆）：
+
+- 材料表加「买的时候怎么说」和参考价钱
+- 接线章前加「先认清面包板」—— 凹槽断开 / 同列相通，新手最缺的前置
+- 验收章从「看日志里程碑」改成「你做什么 → 应该看到什么」
+- 速查表删掉 esptool 五个偏移地址的命令（小白用不到，写错反而危险）
+
+---
+
+## 上一轮（2026-10-17 下午）改了什么
 
 **内容结构整体重写：从「原理 + 排查」改成「照着做的操作手册」。**
 
