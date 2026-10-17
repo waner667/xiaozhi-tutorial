@@ -31,6 +31,7 @@ difficulty: 3
 | 烧录连不上 / 一直等 | [烧录那一节](#二烧录) |
 | 怀疑引脚被外设占了 | [铁律二](#铁律二gpio_get_level-读到低就是真的低) |
 
+
 ---
 
 ## 核心思想
@@ -88,7 +89,7 @@ boot(GPIO9)=1  touch(GPIO21)=0  vol+(GPIO20)=0  vol-(GPIO19)=0
 
 ---
 
-### 铁律二：`gpio_get_level()` 读到低就是真的低
+### 铁律二：gpio_get_level 读到低就是真的低
 
 **这条被违反过，而且代价不小。**
 
@@ -346,7 +347,7 @@ for p in list_ports.comports():
 
 **判据：拔掉板子再列一次，对比少了哪个。**
 
-> **Windows 上 COM3/4/5/6/8/9 这类通常是蓝牙虚拟口。**
+> **Windows 上 COM3、COM5 这类小号通常是蓝牙虚拟口。**
 > 往这些口烧录，esptool 会**安静地空等，然后超时** —— 看起来像板子坏了，其实只是选错口。
 
 ### 2.2 进入下载模式
@@ -622,7 +623,7 @@ git checkout -b <feature-name>
 某些传感器），统一用**代理对象**模式，不要在运行期替换指针。
 
 完整解释和代码见
-[教程一 · 第 10 节](01-xiaozhi-ai.md#10-架构教训异步初始化的外设不能用指针替换)。
+[教程一 · 附录 A.1](01-xiaozhi-ai.md#a1-为什么不能直接换指针)。
 
 核心一句话：
 
@@ -682,7 +683,7 @@ git checkout -b <feature-name>
 **串口与烧录**
 
 - [ ] 串口按 VID:PID 认，不看 COM 号
-- [ ] 排除蓝牙虚拟口（COM3/4/5/6/8/9 这类）
+- [ ] 排除蓝牙虚拟口（COM3、COM5 这类小号）
 - [ ] 手动进下载模式（BOOT → RST → 松 RST → 保持 BOOT 2s → 松 BOOT）
 - [ ] **单次连接**，`--before no-reset --after no-reset`，不要先探测
 - [ ] 偏移从 `flasher_args.json` 读，不手抄

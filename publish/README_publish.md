@@ -6,10 +6,10 @@
 |---|---|
 | 空间 | [小智 DIY 教程 · ESP32-C6](https://docs.qq.com/space/DZXBtZVh1eGxJWWRJ) |
 | space_id | `epmeXuxlIYdI` |
-| 总览节点 | `eeCCEnsOdLSl`（小智 DIY 教程站 · 总览） |
-| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `ehtyhowTulMA` |
-| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `eDtFhOYeaVML` |
-| 03 · 排查手册 | 文件夹 `ebobnNgGThws` / 文档 `ewQlojuerdGN` |
+| 总览节点 | `epoqdcmXYuQN`（小智 DIY 教程站 · 总览） |
+| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `exhqHWzojEjS` |
+| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `egUYQYcrwYsc` |
+| 03 · 排查手册 | 文件夹 `ebobnNgGThws` / 文档 `eZGdcYNrrIAJ` |
 
 四篇都是 `doc_type: word`（docx 导入），**可以在腾讯文档里直接编辑**。
 
@@ -31,14 +31,21 @@
 
 ```bash
 # 1. 生成 docx（顺带算好 size / md5）
-python _build_tutorial_docx.py
+python E:/QRS/Project/xiaozhi/xiaozhi_xiage/_build_tutorial_docx.py
 
-# 2. 按 _build/docx_report.txt 里的 size / md5 走导入流程：
+# 2. 跑脱敏 + 死链 + 缺图自检（必须 0 问题）
+python E:/QRS/Project/xiaozhi/xiaozhi_xiage/_check2.py
+
+# 3. 按 _build/docx_report.txt 里的 size / md5 走导入流程：
 #    pre_import → cos_put --put → async_import → import_progress
 #    然后 move_file_to_space 挂到对应文件夹
+# 4. 确认新节点挂好之后，删掉旧节点
 ```
 
 完整流程见 skill `tencent-docs-md-upload`。
+
+**顺序很重要**：先确认新节点已经在知识库里显示正常，再删旧节点。
+否则中途失败会两边都没有。
 
 ---
 
@@ -53,20 +60,43 @@ python _build_tutorial_docx.py
 
 ---
 
-## 关于内部互链
+## 关于内部互链：为什么不写成真链接
 
-现在四篇之间的互引在 docx 里是**可读中文标题的纯文字，不是可点链接**。
+已经实测过一轮，结论是**不要做**，原因是结构性的：
 
-原因：节点 ID 导入后才确定，链接只能在导入那一刻写死。
-等四篇都拿到 ID 之后，可以在 `_build/link_overrides.json` 里写入：
+`link_overrides.json` 可以把站内互引写死成 `resourceId=xxx` 的真 URL，
+`md2docx` 也确实会导出成可点的 `w:hyperlink`。技术链路是通的。
 
-```json
-{
-  "01-xiaozhi-ai.md": "https://docs.qq.com/space/epmeXuxlIYdI?resourceId=ehtyhowTulMA&mode=wiki_mode"
-}
-```
+但它有鸡生蛋死结：
 
-再重跑 `_build_tutorial_docx.py`，新导出的版本就会带真链接。
+1. 节点 ID 只有导入后才确定 → 第一轮导入用的是「纯文字互引」
+2. 拿到 ID 后写 `link_overrides` 重建 → **新节点 ID 又变了**
+3. 旧节点一删，写死在正文里的 URL 全部指向不存在的节点
 
-⚠️ 代价：**所有四篇都要重建一遍**，因为链接是双向的。
-只有当你打算长期不再改结构时才值得做。
+也就是说每修一轮链接就要再重导一轮，永远收敛不了。
+除非接受「链接永远指向上一代的节点」这种僵尸链接。
+
+**知识库形态下这个代价不值得。** 左侧目录树本身就承担了跳转，
+正文里保留可读的中文标题（如「教程二 · 小智机器狗」）已经够用 ——
+读者看到名字就知道去哪找。
+
+站内链接走 `prep_md.rewrite()` 规则 2：命中同批文档 → 替换成可读中文标题的纯文字。
+外部 URL（乐鑫文档、GitHub）会导出成真正的可点超链接。
+
+---
+
+## 本轮（2026-10-17）改了什么
+
+**内容结构整体重写：从「原理 + 排查」改成「照着做的操作手册」。**
+
+改之前的主线是 `成品 → 原理 → 排查 → 经验`，读者读完知道原理但不知道从哪下手。
+改之后的主线是 `成品 → 材料 → 接线 → 烧录 → 配网 → 验收 → 常见问题`，
+深度内容全部收进文末附录。
+
+- 教程一：8 章主线 + 5 个附录（屏为什么晚亮 3 秒 / IDF 6.1 的坑 / 误判复盘）
+- 教程二：9 章主线 + 5 个附录（duty 量纲 / 为什么用 C6 / 软件偏置）
+- 新增「买之前要确认」「上电前检查清单」这类**防买错/防烧板**的章节
+
+**顺带修了 `md2docx.py` 的一个真 bug**：
+`[文字](url)` 原来只渲染成蓝色下划线，**URL 被整个丢弃**，
+所有外部链接都是死链。现在写标准的 `w:hyperlink` + `r:id` 关系。
