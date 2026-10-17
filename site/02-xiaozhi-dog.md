@@ -361,15 +361,44 @@ uint32_t AngleToDuty(int deg) const {
 
 ## 6. 烧录
 
-烧录方式和教程一**完全一样**，细节见[教程一第 4 节](01-xiaozhi-ai.md#4-烧录固件)。
-这里只提醒一个跟舵机相关的点：
+先看这一条，然后照着教程一烧就行。
 
-> ⚠️ **舵机上有电时不要烧录。**
+> ⚠️ **★ 舵机通电状态下不要烧录。**
 >
-> 烧录时板子会复位，舵机的信号线在这瞬间会失去确定的电平，
-> 运气好只是抖一下，运气不好会顶到限位堵转。
+> 烧录时板子会复位，舵机的信号线在这瞬间会失去确定电平。
+> 运气好只是抖一下，运气不好会顶到限位堵转，电机和舵机都可能坏。
 >
-> 烧录前**先把外部 5V 电源关掉**，烧完再开。
+> **烧录前先把外部 5V 电源关掉，烧完再开。**
+> 只插 USB 给板子供电是可以的。
+
+### 6.1 两条路选一条
+
+**路线 A：用命令烧（最省心）**
+
+```bash
+# 烧录前先关外部 5V 电源
+idf.py build
+idf.py -p <COM11> flash
+```
+
+手动进下载模式的按法、怎么找 COM 口，见
+[教程一 4.6 ~ 4.8](01-xiaozhi-ai.md#46-找到板子的串口)。
+
+**路线 B：用工具软件烧（推荐给你反复改固件的情况）**
+
+这一篇要反复编译、反复烧。用图形工具比敲命令快：
+
+```bash
+idf.py build
+python scripts/release.py      # 产出 build/merged-binary.bin
+```
+
+然后打开乐鑫Flash 下载工具，按 [教程一 4.9 节](01-xiaozhi-ai.md#49-以后都用工具软件烧更省事)
+的六步走：芯片型号选 **`ESP32-C6`**、加载模式选 **`UART`**、
+加载 `merged-binary.bin`、**勾上左边的勾选框**、地址填 **`0x0`**、选 COM 口，点 `START`。
+
+> 📌 **两种烧法随时可以混用。** 命令烧进去的固件，和工具烧进去的完全一样，
+> 随便挑顺手的。工具的好处是不用记偏移地址，也不用手动进下载模式那么麻烦。
 
 编译产物参考大小：`xiaozhi.bin` 约 2.3 MB（分区剩余约 44%）。
 
@@ -478,7 +507,7 @@ int ApplyOffset(int i, int deg) const { return ClampAngle(deg + offset_[i]); }
 
 ### 8.5 编译或烧录
 
-见[教程一第 7.1 节](01-xiaozhi-ai.md#71-编译或烧录阶段)，这几篇是通的。
+见[教程一第 7.1 节](01-xiaozhi-ai.md#71-烧录阶段)，这几篇是通的。
 
 ---
 
@@ -648,12 +677,16 @@ int ApplyOffset(int i, int deg) const { return ClampAngle(deg + offset_[i]); }
 ## 附录 E：烧录速查
 
 ```bash
-# 烧录前：关掉外部 5V 电源
-# 烧录方式和教程一完全一样
-idf.py -p <COM11> flash
-esptool --chip esp32c6 --port <COM11> run
+# ★ 烧录前：先关掉外部 5V 电源（舵机不能带电复位）
 
-# 回退固件
+# 路线 A：命令烧
+idf.py -p <COM11> flash
+
+# 路线 B：工具烧（先打包）
+idf.py build && python scripts/release.py
+# 然后 Flash 下载工具：ESP32-C6 / UART / merged-binary.bin / 勾选 / 0x0 / COM / START
+
+# 回退到语音助手那版固件
 git checkout baseline-ai-working && idf.py build && idf.py flash
 ```
 
@@ -663,4 +696,5 @@ git checkout baseline-ai-working && idf.py build && idf.py flash
 
 - 舵机不动 → [教程三 · 外设不工作怎么查](03-troubleshooting.md)，先看「有电流还是没电流」那条判据
 - 屏又黑了 → [教程一 7.3 节](01-xiaozhi-ai.md#73-屏幕黑屏)
-- 烧录连不上 → [教程一 7.1 节](01-xiaozhi-ai.md#71-编译或烧录阶段)
+- 烧录连不上 → [教程一 7.1 节](01-xiaozhi-ai.md#71-烧录阶段)
+- 找不到 COM 口 → [教程一 4.6 节](01-xiaozhi-ai.md#46-找到板子的串口)
