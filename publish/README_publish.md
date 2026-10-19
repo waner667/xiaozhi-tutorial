@@ -7,8 +7,8 @@
 | 空间 | [小智 DIY 教程 · ESP32-C6](https://docs.qq.com/space/DZXBtZVh1eGxJWWRJ) |
 | space_id | `epmeXuxlIYdI` |
 | 总览节点 | `exOOamjfJasG`（小智 DIY 教程站 · 总览） |
-| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `ebKkLCCBlgkR` |
-| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `eJMWmtdHMiqa` |
+| 01 · 入门：语音助手 | 文件夹 `eoihdzHBncbw` / 文档 `eXcIRXARqWJl` |
+| 02 · 进阶：机器狗 | 文件夹 `eoFAwomqmfwo` / 文档 `eEglpaFEDtwv` |
 | 03 · 排查手册 | 文件夹 `ebobnNgGThws` / 文档 `ewNFROVNTbPC` |
 
 四篇都是 `doc_type: word`（docx 导入），**可以在腾讯文档里直接编辑**。
@@ -114,6 +114,30 @@ C6: OLED SDA=11/SCL=10、BCLK/LRC 与麦克风共用 4/5）。照着接会接错
 | `flash-tool-ch343.png` | 设备管理器里认出 CH343 那一项 |
 
 README 的「许可与免责」里已标注来源、版权归原作者、**截图里是 S3 而本文用 C6**。
+
+---
+
+## 本轮（2026-10-19）改了什么
+
+**烧录章加入「下载现成固件」路线，两套固件包以腾讯文档附件形式随教程发布。**
+
+- 教程一 / 教程二烧录章从「两条路」改成「三条路」：路线 A 下载现成固件（推荐）/
+  路线 B 命令烧 / 路线 C 工具软件烧
+- 两套固件在本地 ESP-IDF 6.1 环境实际编译，用 esptool `merge-bin` 合并成单文件
+  （bootloader + partition-table + ota_data + app + generated_assets 五个偏移，
+  约 8.4 MB，`0x0` 单文件直烧）：
+  - 语音助手：`fw-release/xiaozhi-ai-merged-v1.bin`（md5 `fc09722a…`，
+    oled-working 基线，二进制里无舵机符号，已探针验证）
+  - 机器狗：`fw-release/xiaozhi-dog-merged-v1.bin`（md5 `d03c4090…`，
+    servo-work 基线，含 4 舵机控制）
+- 两个 bin 走 `doc.pre_insert_attachment` → COS PUT → `doc.insert_attachment`
+  上传为腾讯文档附件。附件文件名统一为 `merged-binary.bin`（与正文互引一致），
+  显示文本区分两套：教程一插在 4.9「路线 1」bullet 之后，
+  教程二插在 6.1 路线 A 描述之后。上传校验：COS 返回 ETag 与本地 MD5 一致。
+- 构建 / 合并脚本：`E:\QRS\Project\xiaozhi\fw-release\`（`_merge.py` 通用合并、
+  `build_ai.ps1` 语音助手构建；机器狗走 `phase2-servo-dog/scripts/build_autocycle.ps1`）
+- 已知坑：esptool v5 的 `merge_bin` 子命令已更名 `merge-bin`；`@参数文件` 里
+  路径的反斜杠会被当转义符吃掉，必须转成正斜杠。
 
 ---
 

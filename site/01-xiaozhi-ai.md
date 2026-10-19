@@ -239,16 +239,19 @@ MAX98357A 功放模块：
 
 板子上没有固件就是个砖头。烧固件 = **把程序装进板子**。
 
-这一步有两条路，**选一条就行，不用都做**：
+这一步有三条路，**选一条就行，不用都做**：
 
-| | 路线 A：先用命令烧（推荐） | 路线 B：用工具软件烧 |
-|---|---|---|
-| 怎么做 | 敲一行命令 | 点几下鼠标 |
-| 适合谁 | 想少装东西 | 以后还要反复烧 |
-| 需要准备 | 电脑装好 ESP-IDF | 乐鑫 Flash 下载工具 |
+| | 路线 A：下载现成固件（推荐） | 路线 B：命令烧 | 路线 C：工具软件烧 |
+|---|---|---|---|
+| 怎么做 | 下载 → 点几下鼠标 | 敲一行命令 | 点几下鼠标 |
+| 适合谁 | 不想装编译环境 | 想少装东西 | 以后还要反复烧 |
+| 需要准备 | 乐鑫 Flash 下载工具 | 电脑装好 ESP-IDF | ESP-IDF + Flash 工具 |
+| 从哪看 | **4.9 第一步** | 4.2 ~ 4.8 | 4.9 |
 
-**先按路线 A 走通**，跑起来之后第 4.9 节会告诉你怎么改成路线 B ——
-以后每次改固件，用工具软件点几下就行，比敲命令快得多。
+**只想赶紧跑起来 → 选路线 A**：固件已经打好了，在线版教程附件里就有，
+下载下来用工具点几下就烧完，**4.2 ~ 4.5 全部跳过**，从 4.6 找串口开始就行。
+
+路线 B / C 要自己编译固件，才需要 4.2 ~ 4.5。
 
 ### 4.2 装编译环境（只需装一次）
 
@@ -379,16 +382,23 @@ idf.py -p <COM11> flash
 上面那套每次都要敲命令。**其实编译完之后只需要烧一个文件**，
 用乐鑫的图形工具烧更方便，也更适合手抖的人。
 
-**第一步：打包成一个 bin 文件**
+**第一步：拿到 merged-binary.bin**
 
-编译完之后（在 ESP-IDF 窗口里）敲：
+两条路，选一条：
+
+- **路线 1：下载现成的（推荐，不用编译）**
+  在线版本篇教程的附件里放了打好的 **merged-binary.bin**（约 8.4 MB，
+  2026-10-19 版，对应本篇教程发布时的固件）。
+  点附件名下载，保存到一个**纯英文路径**（比如 D 盘根目录新建一个 `fw` 文件夹）。
+
+- **路线 2：自己编译打包**
+  编译完之后（在 ESP-IDF 命令行窗口里，项目根目录）敲一行：
 
 ```bash
-python scripts/release.py
+python -m esptool --chip esp32c6 merge-bin -o merged-binary.bin 0x0 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0xd000 build/ota_data_initial.bin 0x20000 build/xiaozhi.bin 0x800000 build/generated_assets.bin
 ```
 
-跑完在 `build/` 目录下会出现 **`merged-binary.bin`** —— 这就是你要烧的东西。
-（如果这步报「zip」相关的错，**忽略**，只要文件在就行。）
+  跑完当前目录下就是 `merged-binary.bin` —— 这就是你要烧的东西。
 
 **第二步：下载烧录工具**
 
@@ -451,10 +461,12 @@ python scripts/release.py
 
 烧完点工具上的 `RST`（或直接按板子的 RST 键），板子就进固件了。
 
-> 📌 **两种烧法怎么选？**
-> - 只是想赶紧跑起来 → 一直用 4.8 的`idf.py flash`，一条命令搞定
+> 📌 **几种烧法怎么选？**
+> - 不想装编译环境、只想赶紧跑起来 → 4.9 第一步路线 1，下载现成固件，
+> 用工具点几下就烧完
+> - 装了编译环境，想一条命令搞定 → 4.8 的 `idf.py flash`
 > - 以后要反复改固件烧（做机器狗那篇时就是这样）→ 用 4.9 的工具，
-> 改完编译 → 跑一次 `release.py` → 点几下烧完，不用记偏移地址
+> 改完编译 → 打一次包 → 点几下烧完，不用记偏移地址
 
 ### 4.10 看日志（可选，但很有用）
 
@@ -728,8 +740,8 @@ I2C master 跑在 50kHz 时日志断在探测中途，之后无任何输出。
 # 编译（认这两行：BUILD_EXIT=0 + Successfully created ESP32-C6 image.）
 idf.py build
 
-# 打包出 merged-binary.bin（报错里的 zip 提示可以忽略）
-python scripts/release.py
+# 打包出 merged-binary.bin（esptool 按偏移合并五个文件；不想编译就下载现成的，见 4.9 第一步）
+python -m esptool --chip esp32c6 merge-bin -o merged-binary.bin 0x0 build/bootloader/bootloader.bin 0x8000 build/partition_table/partition-table.bin 0xd000 build/ota_data_initial.bin 0x20000 build/xiaozhi.bin 0x800000 build/generated_assets.bin
 
 # 烧录（先手动进下载模式：按住 BOOT → 点 RST → 松 RST → 继续按 BOOT 2 秒 → 松）
 idf.py -p <COM11> flash
