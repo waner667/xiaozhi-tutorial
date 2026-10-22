@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1160" viewBox="0 0 680 580" role="img">
+<title>ESP32-C6 机器狗接线示意图</title>
+<desc>12V 可调电源经 LM2596 降压到 5V 后接入面包板电源轨；4 个 SG90 舵机并联取 5V 与 GND，信号线分别接 ESP32-C6 的 GPIO3、18、22、23；ESP32 经 5V 与 GND 与舵机共电源、共地。</desc>
+<style>
+  .card { fill: #FFFFFF; stroke: #E3E2DD; stroke-width: 1; }
+  .mod  { fill: #F6F6F3; stroke: #D8D7D1; stroke-width: 0.5; }
+  .t    { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 14px; font-weight: 500; fill: #1F1F1E; }
+  .ts   { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-size: 12px; fill: #5F5E5A; }
+  .v5   { stroke: #D64241; stroke-width: 3; fill: none; }
+  .gnd  { stroke: #45443F; stroke-width: 3; fill: none; }
+  .sig  { stroke: #B06E15; stroke-width: 2.5; fill: none; }
+  .halo { stroke: #FFFFFF; stroke-width: 7; fill: none; }
+</style>
+<rect class="card" x="20" y="10" width="640" height="560" rx="16"/>
+
+<rect class="mod" x="40" y="30" width="155" height="64" rx="10"/>
+<text class="t"  x="117" y="55" text-anchor="middle">12V 可调电源</text>
+<text class="ts" x="117" y="75" text-anchor="middle">调到 6.5V</text>
+
+<path d="M200 62H232" fill="none" stroke="#9C9A93" stroke-width="1.5"/>
+<path d="M232 62l-7 -4v8z" fill="#9C9A93"/>
+
+<rect class="mod" x="240" y="30" width="192" height="64" rx="10"/>
+<text class="t"  x="336" y="55" text-anchor="middle">LM2596 降压模块</text>
+<text class="ts" x="336" y="75" text-anchor="middle">输出 5V · 3A 以上</text>
+
+<path class="v5"  d="M70 124H624"/>
+<path class="gnd" d="M70 148H604"/>
+<text class="ts" x="60" y="124" text-anchor="end" dominant-baseline="central" fill="#D64241">5V</text>
+<text class="ts" x="60" y="148" text-anchor="end" dominant-baseline="central" fill="#45443F">GND</text>
+
+<path class="v5" d="M310 96V124"/>
+<circle cx="310" cy="124" r="4" fill="#D64241"/>
+<path class="halo" d="M390 96V148"/>
+<path class="gnd"  d="M390 96V148"/>
+<circle cx="390" cy="148" r="4" fill="#45443F"/>
+
+<rect class="mod" x="230" y="250" width="185" height="290" rx="12"/>
+<text class="t"  x="322" y="294" text-anchor="middle">ESP32-C6</text>
+<text class="ts" x="322" y="314" text-anchor="middle">小智开发板</text>
+<text class="ts" x="262" y="238" text-anchor="middle" dominant-baseline="central">5V</text>
+<text class="ts" x="320" y="238" text-anchor="middle" dominant-baseline="central">GND</text>
+
+<path class="halo" d="M262 124V250"/>
+<path class="v5"   d="M262 124V250"/>
+<circle cx="262" cy="124" r="4" fill="#D64241"/>
+<path class="gnd" d="M320 148V250"/>
+<circle cx="320" cy="148" r="4" fill="#45443F"/>
+
+<rect class="mod" x="450" y="240" width="140" height="56" rx="10"/>
+<text class="t"  x="520" y="259" text-anchor="middle">舵机 1 · 右前</text>
+<text class="ts" x="520" y="279" text-anchor="middle">GPIO3</text>
+
+<rect class="mod" x="450" y="314" width="140" height="56" rx="10"/>
+<text class="t"  x="520" y="333" text-anchor="middle">舵机 2 · 右后</text>
+<text class="ts" x="520" y="353" text-anchor="middle">GPIO18</text>
+
+<rect class="mod" x="450" y="388" width="140" height="56" rx="10"/>
+<text class="t"  x="520" y="407" text-anchor="middle">舵机 3 · 左前</text>
+<text class="ts" x="520" y="427" text-anchor="middle">GPIO22</text>
+
+<rect class="mod" x="450" y="462" width="140" height="56" rx="10"/>
+<text class="t"  x="520" y="481" text-anchor="middle">舵机 4 · 左后</text>
+<text class="ts" x="520" y="501" text-anchor="middle">GPIO23</text>
+
+<path class="v5"  d="M624 124V505"/>
+<path class="gnd" d="M604 148V505"/>
+<path class="v5"  d="M590 259H624"/>
+<path class="v5"  d="M590 333H624"/>
+<path class="v5"  d="M590 407H624"/>
+<path class="v5"  d="M590 481H624"/>
+<path class="gnd" d="M590 277H604"/>
+<path class="gnd" d="M590 351H604"/>
+<path class="gnd" d="M590 425H604"/>
+<path class="gnd" d="M590 499H604"/>
+
+<path class="sig" d="M415 268H450"/>
+<path class="sig" d="M415 342H450"/>
+<path class="sig" d="M415 416H450"/>
+<path class="sig" d="M415 490H450"/>
+<text class="ts" x="405" y="264" text-anchor="end" dominant-baseline="central">GPIO3</text>
+<text class="ts" x="405" y="338" text-anchor="end" dominant-baseline="central">GPIO18</text>
+<text class="ts" x="405" y="412" text-anchor="end" dominant-baseline="central">GPIO22</text>
+<text class="ts" x="405" y="486" text-anchor="end" dominant-baseline="central">GPIO23</text>
+
+<path class="v5"  d="M60 548H92"/>
+<text class="ts" x="100" y="548" dominant-baseline="central">5V 正极</text>
+<path class="gnd" d="M200 548H232"/>
+<text class="ts" x="240" y="548" dominant-baseline="central">GND 共地</text>
+<path class="sig" d="M360 548H392"/>
+<text class="ts" x="400" y="548" dominant-baseline="central">信号 PWM</text>
+</svg>
