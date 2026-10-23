@@ -10,9 +10,9 @@
 
 | 项 | 值 |
 |---|---|
-| 成片时长 | **1:25**（中英一致，切点相同） |
-| 中文 | 168 字，纯念 0:37，约 4.5 字/秒 |
-| 英文 | 109 词，纯念 0:47，约 140 词/分 |
+| 成片时长 | **1:27**（中英一致，切点相同） |
+| 中文 | 180 字，纯念 0:40，约 4.5 字/秒 |
+| 英文 | 112 词，纯念 0:48，约 140 词/分 |
 | 语气 | 分享。像给朋友看手机里的视频，边说边指 |
 | 出镜 | 正面出镜，手里拿着实物讲 |
 | 不出现 | "关注我""点赞""订阅"；也不出现"我教你""跟着做""很简单" |
@@ -21,7 +21,7 @@
 
 **接线一个字都不讲。** 画面放一次电路图，一句话带过，然后直接展示接好的样子。
 
-**英文比中文慢约 9 秒**，段2 的静场两边都留 6 秒以上，同样凑满 16 秒。
+**英文比中文慢约 8 秒**，段2 的静场两边都留 6 秒以上，同样凑满 16 秒。
 其余各段中英共用同一个时间槽，剪辑时按切点对齐即可。
 
 ---
@@ -42,15 +42,15 @@
 
 ## 段1 · 材料
 
-**`[00:08 — 00:28]`　20 秒**
+**`[00:08 — 00:30]`　22 秒**
 
 > **画面**（出镜。手边逐件点过去，不快）
 > *On camera. Point at each item in turn, unhurried.*
 
 | | 台词 |
 |---|---|
-| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。<br>再加一个降压模块和一个电源给它供电。 |
-| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards.<br>Plus a buck converter and a power supply to feed it all. |
+| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。<br>再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 |
+| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards.<br>Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
 
 > **画面**（拿起一个舵机，转侧面）
 > *Pick up a servo, turn it side-on.*
@@ -64,7 +64,7 @@
 
 ## 段2 · 照图接好
 
-**`[00:28 — 00:44]`　16 秒**
+**`[00:30 — 00:46]`　16 秒**
 
 > **画面**（**切全屏电路图**，停住不动。念完就闭嘴）
 > *Cut to the full-screen wiring diagram. Hold it still. VO ends, then silence — say nothing.*
@@ -81,7 +81,7 @@
 
 ## 段3 · 接好的样子
 
-**`[00:44 — 00:56]`　12 秒**
+**`[00:46 — 00:58]`　12 秒**
 
 > **画面**（**空面包板照片** → 硬切**接好的照片**，同机位同角度，每张约 5 秒，不加转场）
 > *Empty breadboard photo → the finished build photo. Same position, same angle, hard cut.*
@@ -95,9 +95,9 @@
 
 ## 段4 · 烧固件
 
-**`[00:56 — 01:14]`　18 秒**
+**`[00:58 — 01:16]`　18 秒**
 
-> **画面**（出镜拿 USB 线 → 切录屏，工具已打开。录屏这段可 1.5× 加速）
+> **画面**（出镜拿起 Type-C 线 → 切录屏，工具已打开。录屏这段可 1.5× 加速）
 > *Pick up the USB cable → cut to screen recording, tool already open. This clip can run at 1.5×.*
 
 | | 台词 |
@@ -112,7 +112,7 @@
 
 ## 段5 · 好了
 
-**`[01:14 — 01:25]`　11 秒**
+**`[01:16 — 01:27]`　11 秒**
 
 > **画面**（中景，手放电源开关上，打开。四条腿自己站起来。**一镜到底**）
 > *Medium shot. Hand on the power switch. Flip it. The legs stand up. One take, no cuts.*
@@ -181,6 +181,7 @@
 | 面包板（400 孔） | breadboard (400-hole) | 也叫 half-size |
 | 降压模块 | buck converter | 不是 voltage regulator |
 | 杜邦线 | jumper wires | 不是 dupont |
+| Type-C 数据线 | Type-C cable | 烧固件用，**必须能传数据** |
 | 接线图 | wiring diagram | 不是 circuit picture |
 | 固件 / 烧录 | firmware / flash it | **不用 burn** |
 
@@ -208,8 +209,8 @@
 ```
 □ 第一句就进内容，没有自我介绍
    Opens on content — no self-introduction
-□ 材料点完，数量对（4 个舵机、2 块面包板）
-   Parts count right (4 servos, 2 breadboards)
+□ 材料点完，数量对（4 个舵机、2 块面包板、1 根 Type-C 线）
+   Parts count right (4 servos, 2 breadboards, 1 Type-C cable)
 □ 180 度版说了，理由一句话说完
    180-degree servos mentioned
 □ 接线只用一句话带过，没有展开讲颜色/引脚

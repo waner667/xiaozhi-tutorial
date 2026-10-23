@@ -10,9 +10,9 @@
 
 | Item | Value |
 |---|---|
-| Length | **1:25** (VO ≈ 0:50 + pauses and screen time) |
+| Length | **1:27** (VO ≈ 0:48 + pauses and screen time) |
 | Pace | Slow and easy, **~140 words per minute** |
-| Word count | **109 words** (measured by `_count_vo_en.py`) |
+| Word count | **112 words** (measured by `_count_vo_en.py`) |
 | Tone | Sharing. Like showing a friend a video on your phone. |
 | On camera | Face to camera, holding the parts |
 | Never say | "subscribe", "like and follow", "it's super easy", "you can do it too" |
@@ -20,8 +20,8 @@
 **Five steps**: parts → wired per the diagram → what it looks like → flash it → done.
 
 **Cut points are identical to the Chinese version.** Shoot the footage once, lay two audio tracks
-on it. English runs a bit longer (109 words ≈ 0:47 vs 168 Chinese characters ≈ 0:37), so both versions sit on at least
-6 seconds of silence here — same 16-second slot either way.
+on it. English runs a bit longer (112 words ≈ 0:48 vs 180 Chinese characters ≈ 0:40), so both versions sit on at
+least 6 seconds of silence here — same 16-second slot either way.
 
 **Zero wiring explanation.** One sentence, one diagram, then straight to the finished build.
 No colours, no pin numbers, no "this one goes here".
@@ -43,14 +43,14 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ---
 
-## [00:08] Block 1 · The parts (20 s)
+## [00:08] Block 1 · The parts (22 s)
 
 *(On camera. Point at each item in turn, unhurried.)*
 
 > Here's everything it takes: an ESP32-C6, an OLED screen, a microphone,
 > an amplifier and a speaker, four servos, and two 400-hole breadboards.
 >
-> Plus a buck converter and a power supply to feed it all.
+> Plus a buck converter, a power supply, and a Type-C cable to flash it with.
 
 *(Pick up a servo, turn it side-on.)*
 
@@ -58,7 +58,7 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ---
 
-## [00:28] Block 2 · Wired per the diagram (16 s)
+## [00:30] Block 2 · Wired per the diagram (16 s)
 
 *(**Cut to the full-screen wiring diagram.** Hold it still. VO ends, then 6 s of silence — say nothing.)*
 
@@ -70,7 +70,7 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ---
 
-## [00:44] Block 3 · What it looks like (12 s)
+## [00:46] Block 3 · What it looks like (12 s)
 
 *(**Empty breadboard photo** → cut to **the finished build photo**. Same position, same angle, hard cut — no transition.)*
 
@@ -80,7 +80,7 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ---
 
-## [00:56] Block 4 · Flashing the firmware (18 s)
+## [00:58] Block 4 · Flashing the firmware (18 s)
 
 *(Pick up the USB cable → cut to screen recording, tool already open. This clip can run at 1.5×.)*
 
@@ -90,7 +90,7 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ---
 
-## [01:14] Block 5 · Done (11 s)
+## [01:16] Block 5 · Done (11 s)
 
 *(Medium shot. Hand on the power switch. Flip it. The legs stand up. **One take, no cuts.**)*
 
@@ -111,7 +111,7 @@ Use this to check the English says what you meant. **Do not read the left column
 | Block | 中文原句 | English |
 |---|---|---|
 | 0 | 这是机器狗，今天做一个简单的教学。 | This is the robot dog. Today I'm walking through the whole build. |
-| 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。再加一个降压模块和一个电源给它供电。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards. Plus a buck converter and a power supply to feed it all. |
+| 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。再加一个降压模块和一个电源给它供电。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards. Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
 | 1 | 舵机我买的是 180 度版。 | I went with the 180-degree servos. |
 | 2 | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 | I'm not filming the wiring. Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
 | 3 | 左边是空板，右边是接好的。 | On the left, an empty board. On the right, what it actually looks like. |
@@ -149,6 +149,7 @@ These are the lines most likely to come out stiff. Left is the trap, right is na
 | 面包板（400 孔） | breadboard (400-hole / half-size) |
 | 降压模块 | buck converter |
 | 杜邦线 | jumper wires |
+| Type-C 数据线 | Type-C cable (data, not charge-only) |
 | 接线图 | wiring diagram |
 | 固件 / 烧录 | firmware / flash it |
 
@@ -171,7 +172,7 @@ These are the lines most likely to come out stiff. Left is the trap, right is na
 
 ```
 □ Opens on content — no self-introduction
-□ Parts count right (4 servos, 2 breadboards)
+□ Parts count right (4 servos, 2 breadboards, 1 Type-C cable)
 □ 180-degree servos mentioned
 □ Wiring covered in one sentence, no colours or pin numbers
 □ Diagram on screen a full 6 s with nobody talking
