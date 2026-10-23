@@ -12,7 +12,7 @@
 |---|---|
 | Length | **1:25** (VO ≈ 0:50 + pauses and screen time) |
 | Pace | Slow and easy, **~140 words per minute** |
-| Word count | **116 words** (measured by `_count_vo_en.py`) |
+| Word count | **117 words** (measured by `_count_vo_en.py`) |
 | Tone | Sharing. Like showing a friend a video on your phone. |
 | On camera | Face to camera, holding the parts |
 | Never say | "subscribe", "like and follow", "it's super easy", "you can do it too" |
@@ -20,8 +20,8 @@
 **Five steps**: parts → wired per the diagram → what it looks like → flash it → done.
 
 **Cut points are identical to the Chinese version.** Shoot the footage once, lay two audio tracks
-on it. English runs slightly longer (116 words ≈ 0:50 vs 197 Chinese characters ≈ 0:44), so the
-4-second silence on the diagram is enough here, while the Chinese cut stretches it to 6 seconds.
+on it. English runs noticeably longer (117 words ≈ 0:50 vs 168 Chinese characters ≈ 0:37), so the
+4-second silence on the diagram is enough here, while the Chinese cut stretches it to 6–8 seconds.
 
 **Zero wiring explanation.** One sentence, one diagram, then straight to the finished build.
 No colours, no pin numbers, no "this one goes here".
@@ -72,9 +72,9 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ## [00:44] Block 3 · What it looks like (12 s)
 
-*(**Empty breadboard** → cut to **the finished build**. Same position, same angle.)*
+*(**Empty breadboard photo** → cut to **the finished build photo**. Same position, same angle, hard cut — no transition.)*
 
-> On the left, the wiring. On the right, what it actually looks like.
+> On the left, an empty board. On the right, what it actually looks like.
 
 *(About 5 s on each image.)*
 
@@ -114,7 +114,7 @@ Use this to check the English says what you meant. **Do not read the left column
 | 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。再加一个降压模块和一个电源给它供电。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards. Plus a buck converter and a power supply to feed it all. |
 | 1 | 舵机我买的是 180 度版。 | I went with the 180-degree servos. |
 | 2 | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 | I'm not filming the wiring — you can't see it on camera anyway. Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
-| 3 | 左边是杜邦线图，右边是接好的。 | On the left, the wiring. On the right, what it actually looks like. |
+| 3 | 左边是空板，右边是接好的。 | On the left, an empty board. On the right, what it actually looks like. |
 | 4 | 接好之后，我们就把固件烧录到开发板中。 | Once it's wired up, I just flash the firmware onto the board. |
 | 5 | 烧完，打开电源。它自己站起来了。到这儿就成了。 | Power on. And it stands up on its own. That's it. |
 
@@ -129,7 +129,7 @@ These are the lines most likely to come out stiff. Left is the trap, right is na
 | "This is a simple teaching." | "I'm walking through the whole build." |
 | "I will not teach you how to connect." | "I'm not going to film the wiring." |
 | "You need to know the principle of the breadboard." | "If you know your way around a breadboard." |
-| "The left side is the jumper wire picture." | "On the left, the wiring." |
+| "The left side is the jumper wire picture." | "On the left, an empty board." |
 | "We burn the firmware into the development version." | "I just flash the firmware onto the board." |
 | "It stood up by itself." | "It stands up on its own." |
 
