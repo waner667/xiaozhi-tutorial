@@ -11,8 +11,8 @@
 | 项 | 值 |
 |---|---|
 | 成片时长 | **1:27**（中英一致，切点相同） |
-| 中文 | 175 字，纯念 0:39，约 4.5 字/秒 |
-| 英文 | 111 词，纯念 0:48，约 140 词/分 |
+| 中文 | 180 字，纯念 0:40，约 4.5 字/秒 |
+| 英文 | 116 词，纯念 0:50，约 140 词/分 |
 | 语气 | 分享。像给朋友看手机里的视频，边说边指 |
 | 出镜 | 正面出镜，手里拿着实物讲 |
 | 不出现 | "关注我""点赞""订阅"；也不出现"我教你""跟着做""很简单" |
@@ -24,7 +24,7 @@
 **"180 度"只是材料清单里的一个定语**（"四个 180 度的舵机"），说完就走。  
 不单独起一句、不解释为什么——一解释就变上课。
 
-**英文比中文慢约 9 秒**（0:48 vs 0:39），段2 的静场两边都留 5~6 秒，同样凑满 16 秒。  
+**英文比中文慢约 10 秒**（0:50 vs 0:40），段2 的静场两边都留 5~6 秒，同样凑满 16 秒。  
 其余各段中英共用同一个时间槽，剪辑时按切点对齐即可。
 
 ---
@@ -53,8 +53,8 @@
 
 | | 台词 |
 |---|---|
-| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个 180 度的舵机，两块 400 孔的面包板。<br>再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 |
-| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four 180-degree servos, and two 400-hole breadboards.<br>Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
+| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个 180 度的舵机，两块 400 孔的面包板，一把杜邦线。<br>再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 |
+| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four 180-degree servos, two 400-hole breadboards, and a set of jumper wires.<br>Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
 
 > **画面**（放回舵机时手停半秒，让"180°"的丝印露在镜头里，但你不再说话）
 > *Half a beat as you set it down, so the marking reads. Don't add anything.*
@@ -210,8 +210,8 @@
 ```
 □ 第一句就进内容，没有自我介绍
    Opens on content — no self-introduction
-□ 材料点完，数量对（4 个舵机、2 块面包板、1 根 Type-C 线）
-   Parts count right (4 servos, 2 breadboards, 1 Type-C cable)
+□ 材料点完，数量对（4 个舵机、2 块面包板、1 把杜邦线、1 根 Type-C 线）
+   Parts count right (4 servos, 2 breadboards, jumper wires, 1 Type-C cable)
 □ "180 度"在材料里顺带说，没有单独起一句
    "four 180-degree servos" sits inside the list, no separate sentence
 □ 接线只用一句话带过，没有展开讲颜色/引脚

@@ -10,9 +10,9 @@
 
 | Item | Value |
 |---|---|
-| Length | **1:27** (VO ≈ 0:46 + pauses and screen time) |
+| Length | **1:27** (VO ≈ 0:50 + pauses and screen time) |
 | Pace | Slow and easy, **~140 words per minute** |
-| Word count | **111 words** (measured by `_count_vo_en.py`) |
+| Word count | **116 words** (measured by `_count_vo_en.py`) |
 | Tone | Sharing. Like showing a friend a video on your phone. |
 | On camera | Face to camera, holding the parts |
 | Never say | "subscribe", "like and follow", "it's super easy", "you can do it too" |
@@ -20,7 +20,7 @@
 **Five steps**: parts → wired per the diagram → what it looks like → flash it → done.
 
 **Cut points are identical to the Chinese version.** Shoot the footage once, lay two audio tracks
-on it. English runs a bit longer (111 words ≈ 0:48 vs 175 Chinese characters ≈ 0:39), so both versions sit on at
+on it. English runs a bit longer (116 words ≈ 0:50 vs 180 Chinese characters ≈ 0:40), so both versions sit on at
 least 6 seconds of silence here — same 16-second slot either way.
 
 **Zero wiring explanation.** One sentence, one diagram, then straight to the finished build.
@@ -50,7 +50,7 @@ Just hold one up long enough for the marking to be readable, then move on.
 side-on — say "180-degree", put it back down, carry on with the breadboards.)*
 
 > Here's everything it takes: an ESP32-C6, an OLED screen, a microphone,
-> an amplifier and a speaker, four 180-degree servos, and two 400-hole breadboards.
+> an amplifier and a speaker, four 180-degree servos, two 400-hole breadboards, and a set of jumper wires.
 >
 > Plus a buck converter, a power supply, and a Type-C cable to flash it with.
 
@@ -111,7 +111,7 @@ Use this to check the English says what you meant. **Do not read the left column
 | Block | 中文原句 | English |
 |---|---|---|
 | 0 | 这是机器狗，今天做一个简单的教学。 | This is the robot dog. Today I'm walking through the whole build. |
-| 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个 180 度的舵机，两块 400 孔的面包板。再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four 180-degree servos, and two 400-hole breadboards. Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
+| 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个 180 度的舵机，两块 400 孔的面包板，一把杜邦线。再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four 180-degree servos, two 400-hole breadboards, and a set of jumper wires. Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
 | 2 | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个小时就可以了。 | I'm not filming the wiring. Just follow this diagram. If you know a little about how a breadboard works, half an hour is enough. |
 | 3 | 左边是空板，右边是接好的。 | On the left, an empty board. On the right, what it actually looks like. |
 | 4 | 接好之后，我们就把固件烧录到开发板中。 | Once it's wired up, I just flash the firmware onto the board. |
@@ -173,7 +173,7 @@ These are the lines most likely to come out stiff. Left is the trap, right is na
 
 ```
 □ Opens on content — no self-introduction
-□ Parts count right (4 servos, 2 breadboards, 1 Type-C cable)
+□ Parts count right (4 servos, 2 breadboards, jumper wires, 1 Type-C cable)
 □ "four 180-degree servos" sits inside the list — no separate servo sentence
 □ Wiring covered in one sentence, no colours or pin numbers
 □ Diagram on screen a full 6 s with nobody talking
