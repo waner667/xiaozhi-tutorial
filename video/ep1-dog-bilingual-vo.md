@@ -11,8 +11,8 @@
 | 项 | 值 |
 |---|---|
 | 成片时长 | **1:27**（中英一致，切点相同） |
-| 中文 | 180 字，纯念 0:40，约 4.5 字/秒 |
-| 英文 | 112 词，纯念 0:48，约 140 词/分 |
+| 中文 | 175 字，纯念 0:39，约 4.5 字/秒 |
+| 英文 | 111 词，纯念 0:48，约 140 词/分 |
 | 语气 | 分享。像给朋友看手机里的视频，边说边指 |
 | 出镜 | 正面出镜，手里拿着实物讲 |
 | 不出现 | "关注我""点赞""订阅"；也不出现"我教你""跟着做""很简单" |
@@ -21,7 +21,10 @@
 
 **接线一个字都不讲。** 画面放一次电路图，一句话带过，然后直接展示接好的样子。
 
-**英文比中文慢约 8 秒**，段2 的静场两边都留 6 秒以上，同样凑满 16 秒。
+**"180 度"只是材料清单里的一个定语**（"四个 180 度的舵机"），说完就走。  
+不单独起一句、不解释为什么——一解释就变上课。
+
+**英文比中文慢约 9 秒**（0:48 vs 0:39），段2 的静场两边都留 5~6 秒，同样凑满 16 秒。  
 其余各段中英共用同一个时间槽，剪辑时按切点对齐即可。
 
 ---
@@ -44,21 +47,17 @@
 
 **`[00:08 — 00:30]`　22 秒**
 
-> **画面**（出镜。手边逐件点过去，不快）
-> *On camera. Point at each item in turn, unhurried.*
+> **画面**（出镜。手边逐件点过去，不快。点到舵机时拿起来转侧面，说完"180 度"放回去，接着点面包板）
+> *On camera. Point at each item in turn, unhurried. At the servos, pick one up, turn it side-on —
+> say "180-degree", put it down, carry on.*
 
 | | 台词 |
 |---|---|
-| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。<br>再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 |
-| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards.<br>Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
+| **中** | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个 180 度的舵机，两块 400 孔的面包板。<br>再加一个降压模块、一个电源，还有一根 Type-C 数据线——烧固件靠它。 |
+| **英** | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four 180-degree servos, and two 400-hole breadboards.<br>Plus a buck converter, a power supply, and a Type-C cable to flash it with. |
 
-> **画面**（拿起一个舵机，转侧面）
-> *Pick up a servo, turn it side-on.*
-
-| | 台词 |
-|---|---|
-| **中** | 舵机我买的是 **180 度版**。 |
-| **英** | I went with the **180-degree** servos. |
+> **画面**（放回舵机时手停半秒，让"180°"的丝印露在镜头里，但你不再说话）
+> *Half a beat as you set it down, so the marking reads. Don't add anything.*
 
 ---
 
@@ -71,8 +70,8 @@
 
 | | 台词 |
 |---|---|
-| **中** | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 |
-| **英** | I'm not filming the wiring.<br>Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
+| **中** | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个小时就可以了。 |
+| **英** | I'm not filming the wiring.<br>Just follow this diagram. If you know a little about how a breadboard works, half an hour is enough. |
 
 > **画面**（图继续停：中文静 6 秒 / 英文静 4 秒，然后硬切，不加转场）
 > *Diagram keeps holding — about 6 s after either version. Then hard cut.*
@@ -177,7 +176,7 @@
 | 功放 | amplifier | MAX98357 |
 | 喇叭 | speaker | 不是 horn |
 | 舵机 | servo | SG90 |
-| 180 度版 | the 180-degree one | 对比 continuous rotation |
+| 180 度版 | 180-degree | 对比 continuous rotation |
 | 面包板（400 孔） | breadboard (400-hole) | 也叫 half-size |
 | 降压模块 | buck converter | 不是 voltage regulator |
 | 杜邦线 | jumper wires | 不是 dupont |
@@ -195,9 +194,11 @@
   *Look at the lens — especially on the last word.*
 - **手里有东西**：讲舵机拿舵机，讲面包板举面包板。
   *Hold the thing you're talking about.*
+- **"180 度"说完就走**，别补解释。
+  *Say "180-degree" and move on. No follow-up.*
 - **电路图那段别抢话**。图一放上去就闭嘴，静够时间——那几秒比多说十句有用。
   *Silence on the diagram. It does more than ten extra sentences.*
-- **英文比你以为的慢**。开拍前带计时器念两遍；不到 0:50 说明你在赶，放慢而不是加词。
+- **英文比你以为的慢**。开拍前带计时器念两遍；不到 0:48 说明你在赶，放慢而不是加词。
   *Read the English aloud twice with a timer before shooting.*
 - **站起来的镜头别剪碎**，也别配 BGM。
   *One take, room sound, no music.*
@@ -211,8 +212,8 @@
    Opens on content — no self-introduction
 □ 材料点完，数量对（4 个舵机、2 块面包板、1 根 Type-C 线）
    Parts count right (4 servos, 2 breadboards, 1 Type-C cable)
-□ 180 度版说了，理由一句话说完
-   180-degree servos mentioned
+□ "180 度"在材料里顺带说，没有单独起一句
+   "four 180-degree servos" sits inside the list, no separate sentence
 □ 接线只用一句话带过，没有展开讲颜色/引脚
    Wiring in one sentence, no colours or pin numbers
 □ 电路图完整出现，静够约 6 秒没人说话
