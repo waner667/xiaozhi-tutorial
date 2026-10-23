@@ -12,7 +12,7 @@
 |---|---|
 | 成片时长 | **1:25**（中英一致，切点相同） |
 | 中文 | 168 字，纯念 0:37，约 4.5 字/秒 |
-| 英文 | 117 词，纯念 0:50，约 140 词/分 |
+| 英文 | 109 词，纯念 0:47，约 140 词/分 |
 | 语气 | 分享。像给朋友看手机里的视频，边说边指 |
 | 出镜 | 正面出镜，手里拿着实物讲 |
 | 不出现 | "关注我""点赞""订阅"；也不出现"我教你""跟着做""很简单" |
@@ -21,7 +21,7 @@
 
 **接线一个字都不讲。** 画面放一次电路图，一句话带过，然后直接展示接好的样子。
 
-**英文比中文慢 13 秒**，所以段2 的静场：中文静 6~8 秒、英文静 4 秒，两边都刚好凑满 16 秒。
+**英文比中文慢约 9 秒**，段2 的静场两边都留 6 秒以上，同样凑满 16 秒。
 其余各段中英共用同一个时间槽，剪辑时按切点对齐即可。
 
 ---
@@ -72,10 +72,10 @@
 | | 台词 |
 |---|---|
 | **中** | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 |
-| **英** | I'm not filming the wiring — you can't see it on camera anyway.<br>Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
+| **英** | I'm not filming the wiring.<br>Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
 
 > **画面**（图继续停：中文静 6 秒 / 英文静 4 秒，然后硬切，不加转场）
-> *Diagram keeps holding — 6 s after the Chinese line, 4 s after the English. Then hard cut.*
+> *Diagram keeps holding — about 6 s after either version. Then hard cut.*
 
 ---
 
@@ -214,7 +214,7 @@
    180-degree servos mentioned
 □ 接线只用一句话带过，没有展开讲颜色/引脚
    Wiring in one sentence, no colours or pin numbers
-□ 电路图完整出现，静够时间（中 6 秒 / 英 4 秒）没人说话
+□ 电路图完整出现，静够约 6 秒没人说话
    Diagram held, silence kept, nobody talking
 □ 空板/满板两张图都出现
    Empty board and finished board both shown

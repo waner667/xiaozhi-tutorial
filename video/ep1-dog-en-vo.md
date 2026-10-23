@@ -12,7 +12,7 @@
 |---|---|
 | Length | **1:25** (VO ≈ 0:50 + pauses and screen time) |
 | Pace | Slow and easy, **~140 words per minute** |
-| Word count | **117 words** (measured by `_count_vo_en.py`) |
+| Word count | **109 words** (measured by `_count_vo_en.py`) |
 | Tone | Sharing. Like showing a friend a video on your phone. |
 | On camera | Face to camera, holding the parts |
 | Never say | "subscribe", "like and follow", "it's super easy", "you can do it too" |
@@ -20,8 +20,8 @@
 **Five steps**: parts → wired per the diagram → what it looks like → flash it → done.
 
 **Cut points are identical to the Chinese version.** Shoot the footage once, lay two audio tracks
-on it. English runs noticeably longer (117 words ≈ 0:50 vs 168 Chinese characters ≈ 0:37), so the
-4-second silence on the diagram is enough here, while the Chinese cut stretches it to 6–8 seconds.
+on it. English runs a bit longer (109 words ≈ 0:47 vs 168 Chinese characters ≈ 0:37), so both versions sit on at least
+6 seconds of silence here — same 16-second slot either way.
 
 **Zero wiring explanation.** One sentence, one diagram, then straight to the finished build.
 No colours, no pin numbers, no "this one goes here".
@@ -60,13 +60,13 @@ continuous-rotation kind wastes the whole build. Everything else is shown, not t
 
 ## [00:28] Block 2 · Wired per the diagram (16 s)
 
-*(**Cut to the full-screen wiring diagram.** Hold it still. VO ends, then 4 s of silence — say nothing.)*
+*(**Cut to the full-screen wiring diagram.** Hold it still. VO ends, then 6 s of silence — say nothing.)*
 
-> I'm not filming the wiring — you can't see it on camera anyway.
+> I'm not filming the wiring.
 >
 > Just follow this diagram. Know your way around a breadboard? It's about half an hour.
 
-*(Diagram holds 4 s. Nobody talks. Then hard cut.)*
+*(Diagram holds 6 s. Nobody talks. Then hard cut.)*
 
 ---
 
@@ -113,7 +113,7 @@ Use this to check the English says what you meant. **Do not read the left column
 | 0 | 这是机器狗，今天做一个简单的教学。 | This is the robot dog. Today I'm walking through the whole build. |
 | 1 | 用到的就这些：一个 ESP32-C6，一块 OLED 屏，麦克风、功放、喇叭，四个舵机，两块 400 孔的面包板。再加一个降压模块和一个电源给它供电。 | Here's everything it takes: an ESP32-C6, an OLED screen, a microphone, an amplifier and a speaker, four servos, and two 400-hole breadboards. Plus a buck converter and a power supply to feed it all. |
 | 1 | 舵机我买的是 180 度版。 | I went with the 180-degree servos. |
-| 2 | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 | I'm not filming the wiring — you can't see it on camera anyway. Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
+| 2 | 怎么接我就不讲了，照这张图接的。如果你稍微懂一点面包板的原理，半个多小时接完。 | I'm not filming the wiring. Just follow this diagram. Know your way around a breadboard? It's about half an hour. |
 | 3 | 左边是空板，右边是接好的。 | On the left, an empty board. On the right, what it actually looks like. |
 | 4 | 接好之后，我们就把固件烧录到开发板中。 | Once it's wired up, I just flash the firmware onto the board. |
 | 5 | 烧完，打开电源。它自己站起来了。到这儿就成了。 | Power on. And it stands up on its own. That's it. |
@@ -174,7 +174,7 @@ These are the lines most likely to come out stiff. Left is the trap, right is na
 □ Parts count right (4 servos, 2 breadboards)
 □ 180-degree servos mentioned
 □ Wiring covered in one sentence, no colours or pin numbers
-□ Diagram on screen a full 4 s with nobody talking
+□ Diagram on screen a full 6 s with nobody talking
 □ Empty board and finished board both shown
 □ "flash the firmware onto the board" — not "burn into the development version"
 □ Stand-up shot is one unbroken take
