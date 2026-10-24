@@ -95,6 +95,23 @@ ESP32 外设不出活的通用排查手册，与具体项目无关。
 
 ---
 
+## 源码
+
+教程里用到的固件代码、板级配置、烧录脚本都在 GitHub 上，按上面两台机器分开：
+
+| 仓库 | 内容 |
+|---|---|
+| [esp32c6-xiaozhi-ai](https://github.com/waner667/esp32c6-xiaozhi-ai) | 语音助手：`bread-compact-c6` 板级配置、OLED / I2S 麦克风 / I2S 功放接线、编译与烧录脚本 |
+| [esp32c6-xiaohzi-robot-dog](https://github.com/waner667/esp32c6-xiaohzi-robot-dog) | 机器狗：四舵机控制器（`src/dog_leg_controller.h`）、姿态库、MCP 工具扩展 |
+
+不写代码也能做完教程一和二 —— 现成的合并固件包放在各篇的「烧录」章，
+直接下下来烧就行。想改引脚、加动作再去看源码。
+
+上游固件本身在 [78/xiaozhi-esp32](https://github.com/78/xiaozhi-esp32)，
+本仓库只做板级适配，不改核心逻辑。
+
+---
+
 ## 每篇教程都遵守的三条规矩
 
 ### 一、按动手顺序写，不按知识结构写
