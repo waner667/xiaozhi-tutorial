@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="940" viewBox="0 0 1360 940" role="img">
+<title>arch-repo-map.svg</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="680.0" y="30" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="20" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">仓库与目录地图</text>
+<text x="680.0" y="56" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">同一套东西的三种形态：本地工作区（唯一真相源）· GitHub（代码）· 腾讯文档（教程出口）</text>
+<rect x="60" y="84" width="380" height="44" rx="10" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="250.0" y="100" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">① 本地工作区</text>
+<text x="250.0" y="118" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">E:/QRS/Project/xiaozhi/</text>
+<rect x="476" y="84" width="380" height="44" rx="10" fill="#EFF6F0" stroke="#BFD8C4" stroke-width="0.8"/>
+<text x="666.0" y="100" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">② GitHub · 公开仓库</text>
+<text x="666.0" y="118" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">github.com/waner667/</text>
+<rect x="892" y="84" width="380" height="44" rx="10" fill="#F5F1FA" stroke="#D2C6E6" stroke-width="0.8"/>
+<text x="1082.0" y="100" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">③ 腾讯文档 · 对外出口</text>
+<text x="1082.0" y="118" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">docs.qq.com</text>
+<rect x="66" y="139" width="368" height="28" rx="7" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="76.0" y="152" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">xiaozhi_xiage/</text>
+<text x="248.0" y="152" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">主工作区</text>
+<text x="94.0" y="184" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">phase1-xiaozhi-ai/</text>
+<text x="266.0" y="184" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">语音助手工程 + 固件 + 脚本</text>
+<text x="94.0" y="216" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">phase2-servo-dog/</text>
+<text x="266.0" y="216" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">机器狗 src/ docs/ logs/</text>
+<text x="112.0" y="248" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">pcb/ · xiaozhi_robot2/</text>
+<text x="284.0" y="248" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">PCB 未定稿，只在本地</text>
+<text x="94.0" y="280" font-family="Consolas, monospace" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">me/xiaozhi-esp32-2.5.2/</text>
+<text x="266.0" y="280" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">SDK 工作副本（无 remote）</text>
+<text x="94.0" y="312" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">docs/</text>
+<text x="266.0" y="312" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">留档库 guide / projects / blog</text>
+<text x="94.0" y="344" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">firmware/</text>
+<text x="266.0" y="344" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">三个合并固件 bin</text>
+<rect x="66" y="363" width="368" height="28" rx="7" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="76.0" y="376" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">fw-release/</text>
+<text x="248.0" y="376" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">固件合并 + 各类发布脚本</text>
+<text x="94.0" y="408" font-family="Consolas, monospace" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">xiaozhi-ai-merged-v1.bin</text>
+<text x="266.0" y="408" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">8.4 MB · 语音助手版</text>
+<text x="94.0" y="440" font-family="Consolas, monospace" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">xiaozhi-dog-merged-v1.bin</text>
+<text x="266.0" y="440" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">8.4 MB · 含四舵机</text>
+<rect x="66" y="459" width="368" height="28" rx="7" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="76.0" y="472" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">xiaozhi-tutorial/</text>
+<text x="248.0" y="472" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">对外教程（独立 git 仓库）</text>
+<text x="94.0" y="504" font-family="Consolas, monospace" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">site/01~03-*.md</text>
+<text x="266.0" y="504" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">三篇正文</text>
+<text x="94.0" y="536" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">assets/</text>
+<text x="266.0" y="536" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">接线图 · 烧录截图 · 架构图</text>
+<text x="94.0" y="568" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">video/</text>
+<text x="266.0" y="568" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">口播稿 ep1-*</text>
+<text x="66.0" y="610" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">· /me 下的 SDK 副本 1080 MB，永不外推</text>
+<text x="66.0" y="628" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">· PCB 三件套已写进 .gitignore，只在本地</text>
+<rect x="488" y="152" width="356" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="502.0" y="174" font-family="Consolas, monospace" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">esp32c6-xiaozhi-ai</text>
+<text x="502.0" y="196" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">阶段一源码 + 接线图 + 脚本</text>
+<circle cx="828" cy="174" r="3.5" fill="#3F8B57"/>
+<text x="820.0" y="174" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#3F8B57" text-anchor="end" dominant-baseline="central">public</text>
+<rect x="488" y="228" width="356" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="502.0" y="250" font-family="Consolas, monospace" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">esp32c6-xiaohzi-robot-dog</text>
+<text x="502.0" y="272" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">阶段二源码 + 文档（PCB 已撤出）</text>
+<circle cx="828" cy="250" r="3.5" fill="#3F8B57"/>
+<text x="820.0" y="250" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#3F8B57" text-anchor="end" dominant-baseline="central">public</text>
+<rect x="488" y="304" width="356" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="502.0" y="326" font-family="Consolas, monospace" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">xiaozhi-tutorial</text>
+<text x="502.0" y="348" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">三篇教程 + 配图 + 口播稿</text>
+<circle cx="828" cy="326" r="3.5" fill="#3F8B57"/>
+<text x="820.0" y="326" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#3F8B57" text-anchor="end" dominant-baseline="central">public</text>
+<rect x="488" y="382" width="356" height="130" rx="9" fill="#FCFCFA" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="502.0" y="400" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">公开前三件事（做完才能转 public）</text>
+<text x="502.0" y="422" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">① 脱敏：盘符 / SSID / BSSID / MAC / 内网 IP</text>
+<text x="502.0" y="441" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">② 撤出未定稿内容（PCB 三件套）</text>
+<text x="502.0" y="460" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">③ 统一挂 MIT LICENSE</text>
+<text x="502.0" y="479" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">④ 历史重写后 force push，再用 API 验 private=false</text>
+<rect x="904" y="152" width="396" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="918.0" y="174" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">学习进度总览</text>
+<text x="918.0" y="196" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">项目入口 · 学习进度 · 待办</text>
+<text x="1288.0" y="174" font-family="Consolas, monospace" font-size="8" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">eVZkVPwwSUGF</text>
+<rect x="904" y="228" width="396" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="918.0" y="250" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">项目教程</text>
+<text x="918.0" y="272" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">教程一 / 二 / 三（附件 = 固件包）</text>
+<text x="1288.0" y="250" font-family="Consolas, monospace" font-size="8" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">eZJhmOuNoBtk</text>
+<rect x="904" y="304" width="396" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="918.0" y="326" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">项目资料库</text>
+<text x="918.0" y="348" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">项目记录 · 通用方法论 · 对外博文</text>
+<text x="1288.0" y="326" font-family="Consolas, monospace" font-size="8" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">egkcUzTLTdFo</text>
+<rect x="904" y="380" width="396" height="66" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="918.0" y="402" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">WorkBuddy 资料库</text>
+<text x="918.0" y="424" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">我的文档/小智/ 个人快照</text>
+<text x="1288.0" y="402" font-family="Consolas, monospace" font-size="8" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">aLdUK600mGWd…</text>
+<rect x="904" y="458" width="396" height="130" rx="9" fill="#FCFCFA" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="918.0" y="476" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">同步方向（单向，不回流）</text>
+<text x="918.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">本地 md = 唯一真相源（canonical）</text>
+<text x="918.0" y="517" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">腾讯文档 = 对外出口，导入后不回头改</text>
+<text x="918.0" y="536" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">资料库 = 个人快照，不自动同步</text>
+<text x="918.0" y="555" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">改内容：改本地 → 重新导入 → 删旧节点</text>
+<path d="M440 300L469.7 300.0" fill="none" stroke="#9C9A93" stroke-width="2.2"/>
+<path d="M476 300L469.0 296.5L469.0 303.5Z" fill="#9C9A93"/>
+<text x="458.0" y="286" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">git push</text>
+<path d="M856 300L885.7 300.0" fill="none" stroke="#9C9A93" stroke-width="2.2"/>
+<path d="M892 300L885.0 296.5L885.0 303.5Z" fill="#9C9A93"/>
+<text x="874.0" y="286" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">导入</text>
+<rect x="60" y="700" width="1240" height="210" rx="12" fill="#FCFCFA" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="80.0" y="722" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">三条链，别搞混</text>
+<rect x="80" y="742" width="390" height="148" rx="9" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="96.0" y="764" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">代码链</text>
+<text x="96.0" y="788" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">改 src/ 里的 config 或控制器</text>
+<text x="96.0" y="810" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ 编译 → 烧录 → 真机验证</text>
+<text x="96.0" y="832" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ git commit / push 到 GitHub</text>
+<rect x="484" y="742" width="390" height="148" rx="9" fill="#FDF4EC" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="500.0" y="764" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">固件链</text>
+<text x="500.0" y="788" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">编译产物五个 bin</text>
+<text x="500.0" y="810" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ _merge.py 按偏移合并（0x0/0x8000/0xd000/0x20000/0x800000）</text>
+<text x="500.0" y="832" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ merged-binary.bin 挂成教程附件</text>
+<rect x="888" y="742" width="390" height="148" rx="9" fill="#F5F1FA" stroke="#D2C6E6" stroke-width="0.8"/>
+<text x="904.0" y="764" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">文档链</text>
+<text x="904.0" y="788" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">docs/*.md 与 tutorial/site/*.md</text>
+<text x="904.0" y="810" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ 导入腾讯文档（对外）</text>
+<text x="904.0" y="832" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">→ 同步一份到资料库（个人快照）</text>
+<text x="680.0" y="890" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">同一个固件包同时出现在：本地 fw-release/ · 教程附件 · 部分仓库 firmware/ —— 以 fw-release 的 md5 为准</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="720" viewBox="0 0 1360 720" role="img">
+<title>arch-system-ai.svg</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="680.0" y="32" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="20" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">系统架构 · 阶段一：小智 AI 语音助手</text>
+<text x="680.0" y="58" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">ESP32-C6 面包板 · 板型 bread-compact-c6 · 固件 xiaozhi-esp32 v2.5.2</text>
+<rect x="760" y="88" width="250" height="56" rx="12" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="885.0" y="108" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">小智官方服务器</text>
+<text x="885.0" y="128" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">语音识别 · 大模型 · 语音合成</text>
+<rect x="1044" y="88" width="250" height="56" rx="12" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="1169.0" y="108" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">局域网 / WiFi</text>
+<text x="1169.0" y="128" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">2.4G · 配网后自动上线</text>
+<path d="M1010 116 L1044 116" fill="none" stroke="#9C9A93" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1012.0" y="100" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">HTTPS / WSS</text>
+<rect x="355" y="200" width="230" height="116" rx="14" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="1.2"/>
+<text x="470.0" y="224" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="17" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">ESP32-C6</text>
+<text x="470.0" y="248" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">RISC-V · WiFi 6 / BLE</text>
+<text x="470.0" y="270" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">4 MB Flash · 单 I2S 控制器</text>
+<text x="470.0" y="292" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">LEDC · I2C · GPIO</text>
+<path d="M470 200 L470 116" fill="none" stroke="#C6D2E4" stroke-width="2.0" stroke-linejoin="round"/>
+<path d="M470 116L752.8 116.0" fill="none" stroke="#C6D2E4" stroke-width="2.0"/>
+<path d="M760 116L752.0 112.0L752.0 120.0Z" fill="#C6D2E4"/>
+<text x="478.0" y="150" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5570A0" text-anchor="start" dominant-baseline="central">音频流上行 / 下行（WSS）</text>
+<text x="425.0" y="332" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#A9631F" text-anchor="start" dominant-baseline="central">★ 只有一个 I2S 控制器 → 麦克风与功放共用 BCLK / WS</text>
+<text x="425.0" y="354" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#A9631F" text-anchor="start" dominant-baseline="central">★ 三脚微动开关：外侧两脚同端，接「中间脚 + 任一侧脚」</text>
+<rect x="70" y="196" width="200" height="62" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="170.0" y="216" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">麦克风 INMP441</text>
+<text x="170.0" y="238" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">I2S 数字输出 · 16kHz</text>
+<path d="M270 227L347.8 227.0" fill="none" stroke="#6B4F9E" stroke-width="2.2"/>
+<path d="M355 227L347.0 223.0L347.0 231.0Z" fill="#6B4F9E"/>
+<text x="283.0" y="236" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#6B4F9E" text-anchor="start" dominant-baseline="central">SCK → GPIO5</text>
+<text x="283.0" y="248" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#6B4F9E" text-anchor="start" dominant-baseline="central">WS  → GPIO4</text>
+<text x="283.0" y="260" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.5" font-weight="400" fill="#6B4F9E" text-anchor="start" dominant-baseline="central">SD  → GPIO6</text>
+<rect x="700" y="196" width="200" height="62" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="800.0" y="216" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">功放 MAX98357</text>
+<text x="800.0" y="238" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">I2S 解码 · 3W</text>
+<rect x="940" y="196" width="150" height="62" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="1015.0" y="216" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">喇叭 8Ω 3W</text>
+<text x="1015.0" y="238" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">出声</text>
+<path d="M585 227L692.8 227.0" fill="none" stroke="#6B4F9E" stroke-width="2.2"/>
+<path d="M700 227L692.0 223.0L692.0 231.0Z" fill="#6B4F9E"/>
+<path d="M900 227 L940 227" fill="none" stroke="#9C9A93" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="690.0" y="200" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#6B4F9E" text-anchor="end" dominant-baseline="central">BCLK → GPIO5</text>
+<text x="690.0" y="214" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#6B4F9E" text-anchor="end" dominant-baseline="central">LRCK → GPIO4</text>
+<text x="690.0" y="228" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#6B4F9E" text-anchor="end" dominant-baseline="central">DIN  → GPIO7</text>
+<rect x="70" y="396" width="200" height="62" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="170.0" y="416" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12.5" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">OLED SSD1306</text>
+<text x="170.0" y="438" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">128×32 · I2C</text>
+<path d="M270 427L347.8 427.0" fill="none" stroke="#3E6BA6" stroke-width="2.2"/>
+<path d="M355 427L347.0 423.0L347.0 431.0Z" fill="#3E6BA6"/>
+<text x="280.0" y="404" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#3E6BA6" text-anchor="start" dominant-baseline="central">SDA → GPIO11</text>
+<text x="280.0" y="419" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#3E6BA6" text-anchor="start" dominant-baseline="central">SCL → GPIO10</text>
+<rect x="700" y="384" width="200" height="40" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="800.0" y="404" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">按键 SPEAK · GPIO21</text>
+<rect x="700" y="434" width="200" height="40" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="800.0" y="454" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">按键 VOL± · GPIO20 / 19</text>
+<path d="M700 404 L708 404" fill="none" stroke="#B06E15" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M708 404L708.0 323.2" fill="none" stroke="#B06E15" stroke-width="1.8"/>
+<path d="M708 316L704.0 324.0L712.0 324.0Z" fill="#B06E15"/>
+<path d="M700 454 L690 454" fill="none" stroke="#B06E15" stroke-width="1.8" stroke-linejoin="round"/>
+<path d="M690 454L690.0 323.2" fill="none" stroke="#B06E15" stroke-width="1.8"/>
+<path d="M690 316L686.0 324.0L694.0 324.0Z" fill="#B06E15"/>
+<rect x="60" y="496" width="1240" height="200" rx="14" fill="#FCFCFA" stroke="#E3E2DD" stroke-width="1.0"/>
+<text x="80.0" y="518" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">固件分层 · bread-compact-c6 板型</text>
+<text x="1284.0" y="518" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">从上层依赖下层，改引脚只动最右一格</text>
+<rect x="80" y="536" width="262" height="108" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="93.0" y="558" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">① 应用层 · 小智 AI 核心</text>
+<text x="93.0" y="582" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· 语音唤醒 / 对话状态机</text>
+<text x="93.0" y="599" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· 显示 UI · 音量控制</text>
+<text x="93.0" y="616" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· MCP 协议（工具调用）</text>
+<rect x="420" y="536" width="262" height="108" rx="10" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="433.0" y="558" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">② 板级层 · compact_c6_board.cc</text>
+<text x="433.0" y="582" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· GetAudioCodec / GetDisplay</text>
+<text x="433.0" y="599" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· DeferredDisplay 延迟绑屏</text>
+<text x="433.0" y="616" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· InitializeTools() 注册工具</text>
+<rect x="760" y="536" width="262" height="108" rx="10" fill="#FDF4EC" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="773.0" y="558" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">③ 配置层 · config_bread-compact-c6.h</text>
+<text x="773.0" y="582" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· 全部引脚宏的唯一来源</text>
+<text x="773.0" y="599" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· OLED 型号 / 镜像开关</text>
+<text x="773.0" y="616" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· 换板子只改这一个文件</text>
+<rect x="1080" y="536" width="262" height="108" rx="10" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="1093.0" y="558" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">④ ESP-IDF 6.1 + 硬件</text>
+<text x="1093.0" y="582" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· I2S / I2C / LEDC / GPIO</text>
+<text x="1093.0" y="599" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· WiFi 联网 · TLS 证书</text>
+<text x="1093.0" y="616" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.6" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">· 禁区 0/8/16/17/24-30</text>
+<path d="M372 590L408.6 590.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M414 590L408.0 587.0L408.0 593.0Z" fill="#9C9A93"/>
+<path d="M700 590L736.6 590.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M742 590L736.0 587.0L736.0 593.0Z" fill="#9C9A93"/>
+<path d="M1022 556L1074.6 556.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M1080 556L1074.0 553.0L1074.0 559.0Z" fill="#9C9A93"/>
+<text x="660.0" y="672" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">改引脚 → 只改 ③ → 重编译 → 烧录。② 与 ① 不用动，这是那 40 行代码的由来。</text>
+</svg>

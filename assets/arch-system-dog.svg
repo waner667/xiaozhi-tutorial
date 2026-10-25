@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="860" viewBox="0 0 1360 860" role="img">
+<title>arch-system-dog.svg</title>
+<rect width="100%" height="100%" fill="#FFFFFF"/>
+<text x="680.0" y="30" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="20" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">系统架构 · 阶段二：小智机器狗</text>
+<text x="680.0" y="56" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">阶段一全部保留 + 四路舵机控制（板级加 40 行 + 1 个控制器类）</text>
+<rect x="60" y="78" width="1240" height="50" rx="10" fill="#F0F4FA" stroke="#C6D2E4" stroke-width="0.8"/>
+<text x="78.0" y="94" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10" font-weight="600" fill="#3E5C86" text-anchor="start" dominant-baseline="central">语音链路（阶段一已通，不改）</text>
+<text x="78.0" y="112" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">INMP441 → ESP32-C6 → WiFi/WSS → 云端（识别 + 大模型 + 合成）→ MAX98357 → 喇叭</text>
+<rect x="60" y="150" width="340" height="220" rx="12" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="1.2"/>
+<text x="230.0" y="172" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">ESP32-C6 主控</text>
+<text x="230.0" y="192" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">bread-compact-c6 · v2.5.2 + 舵机扩展</text>
+<rect x="78" y="208" width="146" height="34" rx="8" fill="#FFFFFF" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="87.0" y="225" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">右前 RF</text>
+<text x="215.0" y="225" font-family="Consolas, monospace" font-size="9.5" font-weight="400" fill="#B06E15" text-anchor="end" dominant-baseline="central">GPIO3</text>
+<rect x="236" y="208" width="146" height="34" rx="8" fill="#FFFFFF" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="245.0" y="225" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">右后 RB</text>
+<text x="373.0" y="225" font-family="Consolas, monospace" font-size="9.5" font-weight="400" fill="#B06E15" text-anchor="end" dominant-baseline="central">GPIO18</text>
+<rect x="78" y="252" width="146" height="34" rx="8" fill="#FFFFFF" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="87.0" y="269" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">左前 LF</text>
+<text x="215.0" y="269" font-family="Consolas, monospace" font-size="9.5" font-weight="400" fill="#B06E15" text-anchor="end" dominant-baseline="central">GPIO22</text>
+<rect x="236" y="252" width="146" height="34" rx="8" fill="#FFFFFF" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="245.0" y="269" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">左后 LB</text>
+<text x="373.0" y="269" font-family="Consolas, monospace" font-size="9.5" font-weight="400" fill="#B06E15" text-anchor="end" dominant-baseline="central">GPIO23</text>
+<text x="230.0" y="306" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">LEDC：1 个定时器 50Hz × 4 个通道</text>
+<text x="230.0" y="324" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">同频共基 → 四路严格同步</text>
+<text x="230.0" y="350" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">板级代码：InitializeTools() 里 new 一个</text>
+<text x="230.0" y="364" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">DogLegController，注册 3 个 MCP 工具</text>
+<rect x="560" y="152" width="250" height="46" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="573.0" y="168" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">舵机 1 · 右前腿</text>
+<text x="573.0" y="185" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">SG90 180° · 500–2500µs · 10°–170°</text>
+<path d="M224 225L553.8 175.9" fill="none" stroke="#B06E15" stroke-width="1.9"/>
+<path d="M560 175L552.6 172.6L553.6 179.5Z" fill="#B06E15"/>
+<rect x="560" y="208" width="250" height="46" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="573.0" y="224" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">舵机 2 · 右后腿</text>
+<text x="573.0" y="241" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">SG90 180° · 500–2500µs · 10°–170°</text>
+<path d="M382 225L553.7 230.8" fill="none" stroke="#B06E15" stroke-width="1.9"/>
+<path d="M560 231L553.1 227.3L552.9 234.3Z" fill="#B06E15"/>
+<rect x="560" y="264" width="250" height="46" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="573.0" y="280" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">舵机 3 · 左前腿</text>
+<text x="573.0" y="297" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">SG90 180° · 500–2500µs · 10°–170°</text>
+<path d="M224 269L553.7 286.7" fill="none" stroke="#B06E15" stroke-width="1.9"/>
+<path d="M560 287L553.2 283.1L552.8 290.1Z" fill="#B06E15"/>
+<rect x="560" y="320" width="250" height="46" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="573.0" y="336" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">舵机 4 · 左后腿</text>
+<text x="573.0" y="353" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">SG90 180° · 500–2500µs · 10°–170°</text>
+<path d="M382 269L554.2 340.6" fill="none" stroke="#B06E15" stroke-width="1.9"/>
+<path d="M560 343L554.9 337.1L552.2 343.5Z" fill="#B06E15"/>
+<text x="400.0" y="140" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#B06E15" text-anchor="start" dominant-baseline="central">信号线（橙）</text>
+<rect x="860" y="150" width="440" height="220" rx="12" fill="#FDF4EC" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="878.0" y="172" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#8A5A18" text-anchor="start" dominant-baseline="central">电源域（阶段二新增）</text>
+<rect x="878" y="188" width="190" height="50" rx="9" fill="#FFFFFF" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="973.0" y="204" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">12V 可调电源</text>
+<text x="973.0" y="224" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">调到 6.5V</text>
+<rect x="1092" y="188" width="190" height="50" rx="9" fill="#FFFFFF" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="1187.0" y="204" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">LM2596 降压模块</text>
+<text x="1187.0" y="224" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">输出 5V · ≥3A</text>
+<path d="M1068 213L1087.5 213.0" fill="none" stroke="#9C9A93" stroke-width="1.6"/>
+<path d="M1092 213L1087.0 210.5L1087.0 215.5Z" fill="#9C9A93"/>
+<path d="M1187 238 L1187 252" fill="none" stroke="#D64241" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M866 252 L1187 252" fill="none" stroke="#D64241" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="862.0" y="252" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#D64241" text-anchor="end" dominant-baseline="central">5V</text>
+<path d="M866 266 L1187 266" fill="none" stroke="#45443F" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="862.0" y="266" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#45443F" text-anchor="end" dominant-baseline="central">GND</text>
+<path d="M860 266 L838 266 L838 336 L400 336" fill="none" stroke="#45443F" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="400" cy="336" r="3" fill="#45443F"/>
+<text x="404.0" y="348" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9" font-weight="400" fill="#45443F" text-anchor="start" dominant-baseline="central">共地线 → ESP32 GND</text>
+<text x="878.0" y="292" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="400" fill="#A9631F" text-anchor="start" dominant-baseline="central">★ 共地不能少：少这一根 → 舵机有电、</text>
+<text x="878.0" y="308" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.8" font-weight="400" fill="#A9631F" text-anchor="start" dominant-baseline="central">   有阻力，但纹丝不动</text>
+<text x="878.0" y="330" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">烧录前先关外接电源（舵机不能带电复位）</text>
+<text x="878.0" y="350" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">4 路舵机并联取 5V / GND，不要从板子 3V3 取</text>
+<path d="M1187 252 L1322 252 L1322 356" fill="none" stroke="#D64241" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M1187 266 L1308 266 L1308 374" fill="none" stroke="#45443F" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 356 L1322 356" fill="none" stroke="#D64241" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 374 L1308 374" fill="none" stroke="#45443F" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 198 L810 356" fill="none" stroke="#D64241" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M796 198 L796 374" fill="none" stroke="#45443F" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 254 L810 356" fill="none" stroke="#D64241" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M796 254 L796 374" fill="none" stroke="#45443F" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 310 L810 356" fill="none" stroke="#D64241" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M796 310 L796 374" fill="none" stroke="#45443F" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M810 366 L810 356" fill="none" stroke="#D64241" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M796 366 L796 374" fill="none" stroke="#45443F" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1322.0" y="392" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="end" dominant-baseline="central">供电母线（红 5V / 棕 GND）</text>
+<rect x="60" y="398" width="1240" height="200" rx="12" fill="#FCFCFA" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="80.0" y="420" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">一句「坐下」怎么变成舵机转动</text>
+<rect x="82" y="438" width="140" height="100" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="152.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">① 说</text>
+<text x="152.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">「坐下」</text>
+<text x="152.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">用户</text>
+<path d="M222 488L229.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M234 488L229.0 485.5L229.0 490.5Z" fill="#9C9A93"/>
+<rect x="234" y="438" width="140" height="100" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="304.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">② 听懂</text>
+<text x="304.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">云端大模型</text>
+<text x="304.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">选工具</text>
+<text x="304.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">小智 AI</text>
+<path d="M374 488L381.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M386 488L381.0 485.5L381.0 490.5Z" fill="#9C9A93"/>
+<rect x="386" y="438" width="140" height="100" rx="9" fill="#F5F1FA" stroke="#D2C6E6" stroke-width="0.8"/>
+<text x="456.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">③ MCP</text>
+<text x="456.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">self.dog.</text>
+<text x="456.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">do_action(sit)</text>
+<text x="456.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">协议层</text>
+<path d="M526 488L533.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M538 488L533.0 485.5L533.0 490.5Z" fill="#9C9A93"/>
+<rect x="538" y="438" width="140" height="100" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="608.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">④ 分发</text>
+<text x="608.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">DoAction()</text>
+<text x="608.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">→ SitDown()</text>
+<text x="608.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">控制器</text>
+<path d="M678 488L685.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M690 488L685.0 485.5L685.0 490.5Z" fill="#9C9A93"/>
+<rect x="690" y="438" width="140" height="100" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="760.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">⑤ 插值</text>
+<text x="760.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">查姿态库</text>
+<text x="760.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">5°/步 · 20ms</text>
+<text x="760.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">控制器</text>
+<path d="M830 488L837.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M842 488L837.0 485.5L837.0 490.5Z" fill="#9C9A93"/>
+<rect x="842" y="438" width="140" height="100" rx="9" fill="#FDF4EC" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="912.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">⑥ 夹紧</text>
+<text x="912.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">ClampAngle</text>
+<text x="912.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">10°–170°</text>
+<text x="912.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">安全</text>
+<path d="M982 488L989.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M994 488L989.0 485.5L989.0 490.5Z" fill="#9C9A93"/>
+<rect x="994" y="438" width="140" height="100" rx="9" fill="#FDF4EC" stroke="#E8CDAB" stroke-width="0.8"/>
+<text x="1064.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">⑦ 换算</text>
+<text x="1064.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">duty = µs×2²⁰</text>
+<text x="1064.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">/ 20000</text>
+<text x="1064.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">★ 最大的坑</text>
+<path d="M1134 488L1141.5 488.0" fill="none" stroke="#9C9A93" stroke-width="1.8"/>
+<path d="M1146 488L1141.0 485.5L1141.0 490.5Z" fill="#9C9A93"/>
+<rect x="1146" y="438" width="140" height="100" rx="9" fill="#F6F6F3" stroke="#D8D7D1" stroke-width="0.8"/>
+<text x="1216.0" y="458" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#1F1F1E" text-anchor="middle" dominant-baseline="central">⑧ 出脉冲</text>
+<text x="1216.0" y="482" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">ledc_set_duty</text>
+<text x="1216.0" y="498" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="middle" dominant-baseline="central">4 路 50Hz</text>
+<text x="1216.0" y="522" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="8.8" font-weight="400" fill="#8A8880" text-anchor="middle" dominant-baseline="central">硬件</text>
+<text x="80.0" y="622" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="11" font-weight="600" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">四个必须留着不要删的设计（都是烧过硬件换来的）</text>
+<rect x="60" y="636" width="296" height="82" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="74.0" y="656" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">MCP 只给动作名</text>
+<text x="74.0" y="676" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">绝不让 AI 传裸角度 —— 那等于让语言模型</text>
+<text x="74.0" y="692" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">直接控制机械限位，会烧舵机。</text>
+<rect x="372" y="636" width="296" height="82" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="386.0" y="656" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">上电先回 90° 中位</text>
+<text x="386.0" y="676" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">四个舵机同时到位再动作，避免上电瞬间</text>
+<text x="386.0" y="692" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">集体猛冲到限位。</text>
+<rect x="684" y="636" width="296" height="82" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="698.0" y="656" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">硬限位留 10° 余量</text>
+<text x="698.0" y="676" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">SG90 顶到 0°/180° 会持续堵转发热，</text>
+<text x="698.0" y="692" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">严重时烧齿轮。</text>
+<rect x="996" y="636" width="296" height="82" rx="9" fill="#FFFFFF" stroke="#E3E2DD" stroke-width="0.8"/>
+<text x="1010.0" y="656" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="10.5" font-weight="600" fill="#1F1F1E" text-anchor="start" dominant-baseline="central">1 定时器 4 通道</text>
+<text x="1010.0" y="676" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">四路 50Hz 同频，共享时基更省资源，</text>
+<text x="1010.0" y="692" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.2" font-weight="400" fill="#5F5E5A" text-anchor="start" dominant-baseline="central">也保证动作严格同步。</text>
+<text x="60.0" y="742" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">14 个动作：stand / sit / lie / sleep / wake / bow / alert / wag / raise_left / raise_right / front / back / turn_left / turn_right</text>
+<text x="60.0" y="762" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-size="9.5" font-weight="400" fill="#8A8880" text-anchor="start" dominant-baseline="central">另 2 个工具：self.dog.get_state（查当前角度与限位）· self.dog.calibrate（不重烧固件在线标定装歪的舵机臂）</text>
+</svg>
